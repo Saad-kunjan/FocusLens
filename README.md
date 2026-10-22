@@ -120,7 +120,3 @@ FocusLens/
 - User accounts so data syncs across devices
 - Weekly email summary of focus trends
 - Firefox support
-
-## Author
-
-**Saad** – B.E. Computer Science, New Horizon College of Engineering, Bengaluru
