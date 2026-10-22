@@ -1,0 +1,55 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0b1120;
+  color: #e2e8f0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+.app { max-width: 1100px; margin: 0 auto; padding: 24px 16px 48px; }
+
+header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+header h1 { margin: 0; font-size: 28px; }
+header h1 span { color: #14b8a6; }
+.subtitle { margin: 0; color: #94a3b8; flex: 1; }
+header button {
+  background: #14b8a6; color: #0b1120; border: none; padding: 8px 18px;
+  border-radius: 6px; font-weight: 600; cursor: pointer;
+}
+header button:hover { background: #2dd4bf; }
+
+.error { background: #450a0a; border: 1px solid #7f1d1d; color: #fecaca; padding: 12px; border-radius: 8px; margin-bottom: 16px; }
+
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+@media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+
+.card { background: #111827; border: 1px solid #1e293b; border-radius: 12px; padding: 18px; }
+.card h2 { margin: 0 0 12px; font-size: 15px; font-weight: 600; color: #cbd5e1; }
+.chart { height: 220px; }
+.muted { color: #64748b; font-size: 13px; }
+
+.gauge { position: relative; height: 200px; }
+.gauge-label { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; pointer-events: none; }
+.gauge-label strong { font-size: 40px; }
+.gauge-label span { font-size: 12px; color: #94a3b8; }
+.verdict { text-align: center; margin: 10px 0 0; color: #94a3b8; font-size: 14px; }
+
+.top-sites { list-style: none; padding: 0; margin: 0; }
+.top-sites li { margin-bottom: 12px; }
+.site-row { display: flex; justify-content: space-between; font-size: 14px; margin-bottom: 4px; }
+.bar-bg { background: #1e293b; height: 8px; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; }
+.bar-fill.productive { background: #22c55e; }
+.bar-fill.neutral { background: #64748b; }
+.bar-fill.distracting { background: #ef4444; }
+
+.table-card { margin-top: 16px; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 8px; }
+th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #1e293b; }
+th { color: #94a3b8; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+.badge { border: none; border-radius: 999px; padding: 4px 10px; font-weight: 600; font-size: 12px; cursor: pointer; }
+.badge.productive { background: #14532d; color: #86efac; }
+.badge.neutral { background: #334155; color: #cbd5e1; }
+.badge.distracting { background: #7f1d1d; color: #fecaca; }
